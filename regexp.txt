@@ -1,8 +1,0 @@
-//only votes
-//https://www.kinopoisk.ru/user/1627255/votes/list/ord/date/vs/vote/page/1/
-//<div class="nameRus"><a href="/(film|series)/(\d+)/">(.*?)</a>.*?<div class="nameEng">(.*?)</div>.*?<div class="date">(.*?)</div>\s*?<div class="vote"\s?>(\d+)</div>
-///user/1627255/votes/list/ord/date/vs/vote/page/(\d+)/
-
-//votes + seen
-//https://www.kinopoisk.ru/user/1627255/votes/list/ord/date/page/1/
-//<div class="nameRus"><a href="/(film|series)/(\d+)/">(.*?)</a>.*?<div class="nameEng">(.*?)</div>.*?<div class="date">(.*?)</div>\s*?<div class="vote"\s?>(.*?)</div>
