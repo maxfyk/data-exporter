@@ -99,7 +99,7 @@ func parseAllItmes() {
 	re := regexp.MustCompile(config.RegexpPattern)
 
 	//getFirstPage
-	fmt.Println("getting page 1...")
+	fmt.Print("getting page 1...")
 
 	html, err := getHtmlByPage(1)
 	checkError("Cannot get html", err)
@@ -115,7 +115,7 @@ func parseAllItmes() {
 		}
 	}
 
-	fmt.Println("finished page 1...")
+	fmt.Println("finished")
 
 	//write to csv boilerplate
 	file, err := os.Create(config.FileName)
@@ -139,7 +139,7 @@ func parseAllItmes() {
 	//get All pages
 
 	for i := uint(2); i <= maxPage; i++ {
-		fmt.Println("getting page ", i, "...")
+		fmt.Print("getting page ", i, "...")
 		html, err := getHtmlByPage(i)
 		checkError("Cannot get html", err)
 
@@ -158,7 +158,7 @@ func parseAllItmes() {
 			err := writer.Write(getElementsByIndexes(value, config.RegexpIndexes))
 			checkError("Cannot write to file", err)
 		}
-		fmt.Println("finished page ", i, "...")
+		fmt.Println("finished")
 		//end write to csv
 	}
 
