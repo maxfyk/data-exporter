@@ -1,0 +1,40 @@
+{
+    "baseUrl": "https://www.kinopoisk.ru/user/XXX/votes/list/ord/date/page/%d/",
+    "regexpPattern": "<div class=\"nameRus\"><a href=\"\/(film|series)\/(\\d+)\/\">(.*?)<\/a>.*?<div class=\"nameEng\">(.*?)<\/div>.*?<div class=\"date\">(.*?)<\/div>\\s*?<div class=\"vote\"\\s?>(.*?)<\/div>",
+    "regexpPatternPages": "\/votes\/list\/ord\/date\/page\/(\\d+)\/",
+    "csvHeaders": [
+        "kp",
+        "nameRu",
+        "nameEn",
+        "date",
+        "vote"
+    ],
+    "regexpIndexes": [
+        2,
+        3,
+        4,
+        5,
+        6
+    ],
+    "regexpIndexVote": 6,
+    "regexpConvertVoteToNumber": true,
+    "fileName": "result.csv",
+
+    "httpHeaders": [{
+            "name": "user-agent",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36"
+        },
+        {
+            "name": "accept-language",
+            "value": "ru-RU,uk;q=0.9,en-US;q=0.8,en;q=0.7"
+        },
+        {
+            "name": "accept",
+            "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+        },
+        {
+            "name": "cookie",
+            "value": "X-GUEST=eyJpdiI6IkVoVE8yck9FZWhhNG5jYXJVS1NCcEE9PSIsInZhbHVlIjoiTXBaT1JDdW1kbXl5SFlvajJlWk5lXC9oenhWczIzb0ZONStrZU1GSWJVTVNxZ0lEUG5sR1ZPN0hVZWc3QTdhZ3ciLCJtYWMiOiIxODU0ZWQ4OGZjZGMxNDRiZTcyNWYzZTg4YTRhOTJjZTAzZjlhMzA2ZmI4NTZiZDk5Y2I0MTU4MzRkMGMxY2FlIn0%3D; guest=0; remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IjFINDMyQ3NqRmF0Y1hWN2NyZjJ2dHc9PSIsInZhbHVlIjoiem85NEl0YkZxRXB3UkJSQlwvMWwwVzhCMEVWOE1ncU1GeDkyWlhjbVk3dWZ3d2QyT2hzNWRBUWI3eFwvRlV0enVlcWVRQndncW9PZGlkUFA0dkNMOTlZUWJhcTlvdCtGU3drbXNON25mZk1GUXFcL2hzeVg4SWFJZTZONDNLbDJMekt6a3Q2YU5aOFNOR3h4WDFoaGhHQUYxZDNVS3JXM3hBTys0bXJMcnZaMDRmMmJ2KzNxdlFaZXJHYlBVN2hNMlpjZFdxZDFjYWkxZVE0SEQ5c0U0RVBzeERFaWkyYm5jSE95SVVKQnZXVURZST0iLCJtYWMiOiJlYWFlZDJkZmJkMWRiNWRhMGU3ZDRhNWI1YTkzNGUwMGRlOTc0NGM3MTE1NzNhY2ZmMDM4Njk1NDJlYzgwNTgwIn0%3D; __cfduid=d9a6bc4f6c794529cfc12498f3ad544e61620280579; XSRF-TOKEN=eyJpdiI6IlBSREh4YnJPcGZZdWtid0xiRUpKMFE9PSIsInZhbHVlIjoiM2ZJU0NxREZkMlV1TTBwTEljN3FhQW5lVjE5Um00aXVzZWlwNXY4REhVR2luOU81OUV4YThzbmVhK2Q2N0tWciIsIm1hYyI6ImYxMWY1NTJmMzRjMDRjMTU3MmUzMDQyODE3NDk5MDRkODE1ZDk0MTI2NzUzOGJlZTVmYjEwMmM5OTdiODdlZWEifQ%3D%3D; app_session=eyJpdiI6ImZBRHNMdG1vTnNHakxkVTF6WFo3bFE9PSIsInZhbHVlIjoibkRya01uNDVIUHVTbzF2RjlKOFJLc3ppdHpKTnlla3BuTnZHOUNtRkdNZE00MDkwb2U4OFwvNk9mbDhOZm13Ym5uWGkxSVZpZWJvZFR1MTB1bmNnQW41b2lMaUY5aFgzXC9WcFVydGNldHhKcFl2VVwveGthdTNPXC9YTVNQYWdRRzVJIiwibWFjIjoiNzFlNWE1ZDE3OTkzYmJjMTg3MGNlMzBhZWMxMjgyYWQ3ZDdjY2NlOWE5Y2NiY2E4MTcyY2Y5ZGViMjdjYjAzMyJ9"
+        }
+    ]
+}
