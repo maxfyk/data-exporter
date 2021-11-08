@@ -9,6 +9,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"path/filepath"
 	"regexp"
 	"strconv"
 	"strings"
@@ -72,11 +73,24 @@ func main() {
 }
 
 func readConfig(configFileName string) {
-	file, _ := os.Open(configFileName)
+	file, err := os.Open(configFileName)
 	defer file.Close()
+
+	if err != nil {
+		ex, err := os.Executable()
+		if err != nil {
+			log.Fatal(err)
+		}
+		exPath := filepath.Dir(ex)
+		file, err = os.Open(filepath.Join(exPath, configFileName))
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Println(filepath.Join(exPath, configFileName))
+	}
 	decoder := json.NewDecoder(file)
-	err := decoder.Decode(&config)
-	checkError("Error:", err)
+	err = decoder.Decode(&config)
+	checkError("Error parsing config:", err)
 }
 
 func getMaxPage(html string) uint {
