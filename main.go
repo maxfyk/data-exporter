@@ -43,7 +43,7 @@ func main() {
 
 	baseUrl := flag.String("baseUrl", "", "base url")
 	fileName := flag.String("fileName", "", "fileName.csv")
-	configFileName := flag.String("config", "config.json", "config.json")
+	configFileName := flag.String("config", "data-exporter.json", "data-exporter.json")
 
 	flag.Parse()
 
