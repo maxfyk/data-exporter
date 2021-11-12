@@ -119,7 +119,7 @@ func parseAllItems() {
 	re := regexp.MustCompile(config.RegexpPattern)
 
 	//getFirstPage
-	fmt.Print("getting page 1...")
+	fmt.Println("getting page 1...")
 
 	html, err := getHtmlByPage(1)
 	checkError("Cannot get html", err)
