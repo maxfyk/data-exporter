@@ -72,7 +72,7 @@ func main() {
 		log.Fatal("Error: fileName is required")
 	}
 
-	parseAllItmes()
+	parseAllItems()
 	elapsed := time.Since(start)
 	fmt.Println("Time took ", elapsed)
 
@@ -114,7 +114,7 @@ func getMaxPage(html string) uint {
 	return MaxIntInSlice(pageNumbers)
 }
 
-func parseAllItmes() {
+func parseAllItems() {
 
 	re := regexp.MustCompile(config.RegexpPattern)
 
