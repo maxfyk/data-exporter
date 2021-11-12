@@ -31,6 +31,7 @@ type Configuration struct {
 	RegexpIndexVote           uint8
 	RegexpConvertVoteToNumber bool
 	FileName                  string
+	Sleep                     int
 }
 
 var (
@@ -44,6 +45,7 @@ func main() {
 	baseUrl := flag.String("baseUrl", "", "base url")
 	fileName := flag.String("fileName", "", "fileName.csv")
 	configFileName := flag.String("config", "data-exporter.json", "data-exporter.json")
+	sleep := flag.Int("sleep", -1, "sleep between requests in seconds")
 
 	flag.Parse()
 
@@ -54,6 +56,10 @@ func main() {
 	}
 	if len(*fileName) != 0 {
 		config.FileName = *fileName
+	}
+
+	if *sleep > 0 {
+		config.Sleep = *sleep
 	}
 
 	if len(config.BaseUrl) == 0 {
@@ -153,7 +159,10 @@ func parseAllItmes() {
 	//get All pages
 
 	for i := uint(2); i <= maxPage; i++ {
-		fmt.Print("getting page ", i, "...")
+		if config.Sleep > 0 {
+			time.Sleep(time.Duration(config.Sleep) * time.Second)
+		}
+		fmt.Println("getting page ", i, "...")
 		html, err := getHtmlByPage(i)
 		checkError("Cannot get html", err)
 

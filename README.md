@@ -31,6 +31,11 @@ data-exporter.exe -baseUrl="https://www.kinopoisk.ru/user/XXX/votes/list/ord/dat
 data-exporter.exe -fileName="mykp_votes.csv"
 ```
 
+#### Запуск програми з перепризначенням sleep
+```
+data-exporter.exe -sleep=3
+```
+
 Можна комбінувати
 
 ## Додаткові можливості
@@ -42,5 +47,6 @@ data-exporter.exe -fileName="mykp_votes.csv"
 - `regexpIndexVote` - індекс результату regexpPattern, де є ваша оцінка (потрібно тільки якщо regexpConvertVoteToNumber true)
 - `regexpConvertVoteToNumber` - чи конвертувати оцінку в число
 - `fileName` - назва файлу з вашими оцінками, що програма створить
+- `sleep` - затримка між запитами сторінок в секундах
 - `httpHeaders` - якщо не знаєте, що це, то вам це не потрібно :)
 

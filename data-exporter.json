@@ -19,6 +19,7 @@
     "regexpIndexVote": 6,
     "regexpConvertVoteToNumber": true,
     "fileName": "result.csv",
+    "sleep": 1,
 
     "httpHeaders": [{
             "name": "user-agent",
