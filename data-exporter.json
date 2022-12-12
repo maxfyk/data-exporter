@@ -1,7 +1,7 @@
 {
     "baseUrl": "https://www.kinopoisk.ru/user/XXX/votes/list/ord/date/page/%d/",
     "regexpPattern": "<div class=\"nameRus\"><a href=\"\/(film|series)\/(\\d+)\/\">(.*?)<\/a>.*?<div class=\"nameEng\">(.*?)<\/div>.*?<div class=\"date\">(.*?)<\/div>\\s*?<div class=\"vote\"\\s?>(.*?)<\/div>",
-    "regexpPatternPages": "\/votes\/list\/ord\/date\/page\/(\\d+)\/",
+    "regexpPatternPages": "\/votes\/list\/ord\/date\/vs\/vote\/page\/(\\d+)\/",
     "csvHeaders": [
         "kp",
         "nameRu",
